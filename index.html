@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diamond Cove - Lakefront, Dock, Hot Tub, Beaches</title>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            /* Lighter, translucent frosted glass tile color matching StayFi */
+            --card-bg: rgba(255, 255, 255, 0.09);
+            --card-border: rgba(255, 255, 255, 0.18);
+            --text-color: #ffffff;
+            --text-muted: #cbd5e1;
+            --accent-color: #38bdf8;
+            --hover-bg: rgba(255, 255, 255, 0.15);
+        }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 3rem 1.5rem;
+            background-image: linear-gradient(to bottom, rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.95)), url('https://guest.stayfi.com/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCUDBkVUFrPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--2cbdf0a8d66faad9395dedfe0f8d0a6fb34c8735/image');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        .container {
+            width: 100%;
+            max-width: 900px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+        }
+        .header {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.85rem;
+            width: 100%;
+        }
+        .logo-container {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 2px solid var(--accent-color);
+            box-shadow: 0 6px 18px rgba(0,0,0,0.5);
+        }
+        .logo-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        h1 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            line-height: 1.35;
+        }
+        .address {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+        }
+        
+        /* Responsive Grid: Multi-column on desktop, single column on mobile */
+        .links-grid {
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.25rem;
+        }
+
+        .link-card {
+            background-color: var(--card-bg);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid var(--card-border);
+            border-radius: 12px;
+            padding: 1.5rem;
+            text-decoration: none;
+            color: var(--text-color);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 0.75rem;
+            min-height: 140px;
+            transition: all 0.2s ease;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+        .link-card:hover {
+            background-color: var(--hover-bg);
+            border-color: var(--accent-color);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 18px rgba(56, 189, 248, 0.2);
+        }
+        .link-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-color);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .link-desc {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            line-align: 1.4;
+        }
+        .footer {
+            margin-top: 1rem;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+        .social-icon {
+            width: 38px;
+            height: 38px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--card-bg);
+            border-radius: 50%;
+            border: 1px solid var(--card-border);
+            color: var(--text-color);
+            text-decoration: none;
+            transition: background 0.2s;
+        }
+        .social-icon:hover {
+            background: var(--hover-bg);
+            border-color: var(--accent-color);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Header / Property Info -->
+        <div class="header">
+            <!-- Profile Logo -->
+            <div class="logo-container">
+                <img src="https://guest.stayfi.com/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCUDhLVUFrPSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--51844262975ffba8ba4e0b8b911ca4950a872352/logo" alt="Diamond Cove Logo">
+            </div>
+            <h1>Diamond Cove - Lakefront, Dock, Hot Tub, Beaches</h1>
+            <p class="address">6125 GC Crow Road, Flowery Branch, GA</p>
+        </div>
+
+        <!-- Links Grid -->
+        <div class="links-grid">
+            <!-- Guidebook -->
+            <a href="https://docs.google.com/document/d/1I1x2VYYACWJI-g7SK2gbRBjiqYraGxacKotgCRxTHW8/edit?tab=t.0" target="_blank" class="link-card">
+                <div class="link-title">Guidebook <span>→</span></div>
+                <div class="link-desc">Everything you need to know about the house</div>
+            </a>
+
+            <!-- Pre-Arrival Grocery Delivery -->
+            <a href="https://bellhopt.com/guest/YYIQM2" target="_blank" class="link-card">
+                <div class="link-title">Pre-Arrival Grocery Delivery <span>→</span></div>
+                <div class="link-desc">Arrive to a fully stocked kitchen at Diamond Cove!</div>
+            </a>
+
+            <!-- Shop Local Amenities/Services -->
+            <a href="https://app.thehost.co/store/31788/" target="_blank" class="link-card">
+                <div class="link-title">Shop Local Amenities/Services <span>→</span></div>
+                <div class="link-desc">Add-on services and products curated by your host such as private chef, massage, wine tours and more.</div>
+            </a>
+
+            <!-- Local Attractions & Tours -->
+            <a href="attractions.html" class="link-card">
+                <div class="link-title">Local Attractions & Tours <span>→</span></div>
+                <div class="link-desc">Find the best activities and experiences in the area</div>
+            </a>
+
+            <!-- Direct Booking -->
+            <a href="https://diamondcove.hospitable.rentals" target="_blank" class="link-card">
+                <div class="link-title">Book Again <span>→</span></div>
+                <div class="link-desc">Schedule your future stay directly with us</div>
+            </a>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <div>
+                <a href="https://www.instagram.com/diamondcovelanier/" target="_blank" class="social-icon" title="Instagram">
+                    📷
+                </a>
+            </div>
+            <div>
+                Diamond Cove Concierge Hub
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
